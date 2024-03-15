@@ -59,10 +59,8 @@ public class PracticeFormPage extends BasePage {
     private List<WebElement> labelFields;
     @FindBy(xpath = "//table/tbody/tr/td[2]")
     private List<WebElement> valueFields;
-
     @FindBy(id = "submit")
     private WebElement submit;
-
 
 
     public void clickSubmit(){
@@ -124,12 +122,12 @@ public class PracticeFormPage extends BasePage {
         elementMethods.clickElemForce(cityField);
         elementMethods.fillPressElement(cityInputField, cityValue, Keys.ENTER);
     }
-    public void validatePracticeFormTable(String firstNameValue, String lastNameValue, String userEmailValue,
+    public void validatePracticeFormTable(String firstName, String lastName, String userEmailValue,
                                           String mobileNumberValue, String subjectValue, String addressFieldValue,
                                           List<String> Hobbies, String filePath){
 
         Assert.assertEquals(labelFields.get(0).getText(), "Student Name");
-        Assert.assertEquals(valueFields.get(0).getText(), firstNameValue+" "+lastNameValue);
+        Assert.assertEquals(valueFields.get(0).getText(), firstName+" "+lastName);
 
         Assert.assertEquals(labelFields.get(1).getText(), "Student Email");
         Assert.assertEquals(valueFields.get(1).getText(), userEmailValue);

@@ -58,52 +58,9 @@ public class PracticeFormTest extends SharedData {
         practiceFormPage.clickSubmit();
 
 
-//        practiceFormPage.validatePracticeFormTable(firstNameValue, lastNameValue, emailValue, mobileNumValue,
-//                subjectValue, addressFieldValue, Hobbies, filePath);
+        practiceFormPage.validatePracticeFormTable(firstNameValue, lastNameValue, emailValue, mobileNumValue,
+                subjectValue, addressFieldValue, Hobbies, filePath);
 
-
-
-//
-//        //incepem validarile pentru tabelul completat
-//        List<WebElement> labelFields=getWebDriver().findElements(By.xpath("//table/tbody/tr/td[1]"));
-//        List<WebElement> valueFields=getWebDriver().findElements(By.xpath("//table/tbody/tr/td[2]"));
-//
-//        Assert.assertEquals(labelFields.get(0).getText(), "Student Name");
-//        Assert.assertEquals(valueFields.get(0).getText(), firstNameValue+" "+lastNameValue);
-//
-//        Assert.assertEquals(labelFields.get(1).getText(), "Student Email");
-//        Assert.assertEquals(valueFields.get(1).getText(), userEmailValue);
-//
-//        Assert.assertEquals(labelFields.get(2).getText(), "Gender");
-//        Assert.assertEquals(valueFields.get(2).getText(), "Male");
-//
-//        Assert.assertEquals(labelFields.get(3).getText(), "Mobile");
-//        Assert.assertEquals(valueFields.get(3).getText(), mobileNumberValue);
-//
-//        //nu am validat inca data de nastere
-//
-//        Assert.assertEquals(labelFields.get(5).getText(), "Subjects");
-//        Assert.assertEquals(valueFields.get(5).getText(), subjectValue);
-//
-//        Assert.assertEquals(labelFields.get(6).getText(), "Hobbies");
-//        for (Integer index = 0; index < Hobbies.size(); index++) {
-//            Assert.assertTrue(valueFields.get(6).getText().contains(Hobbies.get(index)));
-//        }
-//
-//        Assert.assertEquals(labelFields.get(7).getText(), "Picture");
-//        String[] arrayFile=filePath.split("/");
-//        Integer desiredIndex=arrayFile.length -1;
-//        Assert.assertEquals(valueFields.get(7).getText(), arrayFile[desiredIndex]);
-//
-//        Assert.assertEquals(labelFields.get(8).getText(), "Address");
-//        Assert.assertEquals(valueFields.get(8).getText(), addressFieldValue);
-//
-//        Assert.assertEquals(labelFields.get(9).getText(), "State and City");
-//        Assert.assertEquals(valueFields.get(9).getText(), stateAndCity);
-//
-//        elementMethods.scrollElementByPixel(0,450);
-//        WebElement closeForm=getWebDriver().findElement(By.id("closeLargeModal"));
-////        elementMethods.clickElement(closeForm);
 //        elementMethods.clickElemForce(closeForm);
     }
 }
