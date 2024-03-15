@@ -7,8 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 
 public class BasePage {
     public ElementMethods elementMethods;
-    public AlertMethods alertMethods;
     public WebDriver webDriver;
+    public AlertMethods alertMethods;
 
     public BasePage(WebDriver webDriver) {
         this.webDriver = webDriver;

@@ -17,12 +17,14 @@ public class AlertPage extends BasePage{
     private WebElement alert1Click;
     @FindBy(id = "timerAlertButton")
     private WebElement alertTimerClick;
+    @FindBy(id = "promtButton")
+    private WebElement promptAlert;
     @FindBy(id = "confirmButton")
     private WebElement Alert3confirmButton;
     @FindBy(id = "confirmResult")
     private WebElement allert3rdtext;
-    @FindBy(id = "promtButton")
-    private WebElement promptAlert;
+    @FindBy(id = "promptResult")
+    private WebElement promptAlertResult;
 
     public void dealWithAcceptAlert(){
         elementMethods.clickElement(alert1Click);
@@ -32,14 +34,15 @@ public class AlertPage extends BasePage{
         elementMethods.clickElement(alertTimerClick);
         alertMethods.acceptAlert();
     }
-
     public void dealWithPromptButton(String text){
         elementMethods.clickElement(promptAlert);
         alertMethods.fillAlert(text);
+        elementMethods.validateElementText(promptAlertResult, "You entered "+text);
     }
     public void dealWithCancelButton(){
         elementMethods.clickElement(Alert3confirmButton);
         alertMethods.cancelAlert();
         elementMethods.validateElementText(allert3rdtext, "You selected Cancel");
     }
+
 }

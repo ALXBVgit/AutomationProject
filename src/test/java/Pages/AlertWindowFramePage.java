@@ -22,11 +22,13 @@ public class AlertWindowFramePage extends BasePage{
 ////    }
 
    @FindBy(xpath = "//span[text()='Alerts']")
-   private WebElement browserFrameField;
+   private WebElement browserAlertsField;
+
+
 
    public void navigateToAlertsPage(){
         elementMethods.scrollElementByPixel(0,450);
-        elementMethods.clickElement(browserFrameField);
+        elementMethods.clickElement(browserAlertsField);
    }
 
 }
