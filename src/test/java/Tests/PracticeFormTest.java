@@ -43,20 +43,23 @@ public class PracticeFormTest extends SharedData {
         String cityValue = "Delhi";
 
         PracticeFormPage practiceFormPage = new PracticeFormPage(getWebDriver());
-        practiceFormPage.fillFirstName(firstNameValue);
-        practiceFormPage.fillLastName(lastNameValue);
-        practiceFormPage.fillEmailField(emailValue);
-        practiceFormPage.fillMobileNumber(mobileNumValue);
-        practiceFormPage.pickDateofBirth(monthDateOfBirthValue, yearOfBirthValue, dobDayvalue);
-        practiceFormPage.pickGender(genderValue);
-        practiceFormPage.pickHobbies(Hobbies);
-        practiceFormPage.pickSubjects(subjectValue);
-        practiceFormPage.UploadPicture(filePath);
-        practiceFormPage.pickAddress(addressFieldValue);
-        practiceFormPage.pickState(stateInputValue);
-        practiceFormPage.pickCity(cityValue);
-        practiceFormPage.clickSubmit();
+//        practiceFormPage.fillFirstName(firstNameValue);
+//        practiceFormPage.fillLastName(lastNameValue);
+//        practiceFormPage.fillEmailField(emailValue);
+//        practiceFormPage.fillMobileNumber(mobileNumValue);
+//        practiceFormPage.pickDateofBirth(monthDateOfBirthValue, yearOfBirthValue, dobDayvalue);
+//        practiceFormPage.pickGender(genderValue);
+//        practiceFormPage.pickHobbies(Hobbies);
+//        practiceFormPage.pickSubjects(subjectValue);
+//        practiceFormPage.UploadPicture(filePath);
+//        practiceFormPage.pickAddress(addressFieldValue);
+//        practiceFormPage.pickState(stateInputValue);
+//        practiceFormPage.pickCity(cityValue);
+//        practiceFormPage.clickSubmit();
 
+        practiceFormPage.fillInEntireForm(firstNameValue, lastNameValue, emailValue, mobileNumValue,
+                monthDateOfBirthValue, yearOfBirthValue, dobDayvalue, genderValue, Hobbies, subjectValue,
+                filePath, addressFieldValue, stateInputValue, cityValue);
 
         practiceFormPage.validatePracticeFormTable(firstNameValue, lastNameValue, emailValue, mobileNumValue,
                 subjectValue, addressFieldValue, Hobbies, filePath);
