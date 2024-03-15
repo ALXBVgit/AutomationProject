@@ -159,4 +159,5 @@ public class PracticeFormPage extends BasePage {
 //        Assert.assertEquals(labelFields.get(9).getText(), "State and City");
 //        Assert.assertEquals(valueFields.get(9).getText(), stateAndCity);
     }
+
 }
