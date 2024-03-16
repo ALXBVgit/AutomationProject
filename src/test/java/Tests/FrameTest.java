@@ -2,6 +2,9 @@ package Tests;
 
 import HelperMethods.ElementMethods;
 import HelperMethods.FrameMethods;
+import Pages.AlertWindowFramePage;
+import Pages.FramePage;
+import Pages.HomePage;
 import SharedData.SharedData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -11,40 +14,16 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 public class FrameTest extends SharedData {
-   // comment pentru ca am adaugat mai sus extends ca sa preia pre-test conditions
-   // public WebDriver webDriver;
 
     @Test
     public void windowMethod() {
-        ElementMethods elementMethods = new ElementMethods(getWebDriver());
-        FrameMethods frameMethods = new FrameMethods(getWebDriver());
+        HomePage homePage = new HomePage(getWebDriver());
+        homePage.navigateToAlertFrameWindowPage();
 
-        elementMethods.scrollElementByPixel(0,450);
+        AlertWindowFramePage alertWindowFramePage = new AlertWindowFramePage(getWebDriver());
+        alertWindowFramePage.navigateToFramePage();
 
-        WebElement consentField = getWebDriver().findElement(By.className("fc-button-label"));
-        elementMethods.clickElement(consentField);
-
-        WebElement alertFramesField = getWebDriver().findElement(By.xpath("//h5[text()='Alerts, Frame & Windows']"));
-        elementMethods.clickElement(alertFramesField);
-
-        elementMethods.scrollElementByPixel(0,250);
-        WebElement browserFrameField = getWebDriver().findElement(By.xpath("//span[text()='Frames']"));
-        elementMethods.clickElement(browserFrameField);
-
-        //interactionam cu un iframe
-        frameMethods.switchSpecificIframe("frame1");
-       // webDriver.switchTo().frame("frame1");
-
-        WebElement frameElement1 = getWebDriver().findElement(By.id("sampleHeading"));
-        elementMethods.printElementText(frameElement1);
-
-        //revenim la frame-ul curent
-       // webDriver.switchTo().parentFrame();
-        frameMethods.switchParentFrame();
-
-      //  webDriver.switchTo().frame("frame2");
-        frameMethods.switchSpecificIframe("frame2");
-        WebElement frameElement2 = getWebDriver().findElement(By.id("sampleHeading"));
-        elementMethods.printElementText(frameElement2);
+        FramePage framePage = new FramePage(getWebDriver());
+        framePage.dealWithFrame();
     }
 }

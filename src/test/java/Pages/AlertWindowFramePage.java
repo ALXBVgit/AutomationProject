@@ -11,25 +11,25 @@ public class AlertWindowFramePage extends BasePage{
         super(webDriver);
     }
 
-//pt ca extends BasePage si fac constructor
-//    private ElementMethods elementMethods;
-//    private WebDriver webDriver;
-//
-////    public AlertWindowFramePage(WebDriver webDriver) {
-////        this.webDriver = webDriver;
-////        elementMethods = new ElementMethods(webDriver);
-////        PageFactory.initElements(webDriver, this);
-////    }
-
    @FindBy(xpath = "//span[text()='Alerts']")
    private WebElement browserAlertsField;
+    @FindBy(xpath = "//span[text()='Browser Windows']")
+    private WebElement browserWindowField;
 
-
+    @FindBy(xpath = "//span[text()='Frames']")
+    private WebElement alertFramesPage;
 
    public void navigateToAlertsPage(){
         elementMethods.scrollElementByPixel(0,450);
         elementMethods.clickElement(browserAlertsField);
    }
-
+   public void navigateToWindowPage(){
+       elementMethods.scrollElementByPixel(0,250);
+       elementMethods.clickElement(browserWindowField);
+   }
+   public void navigateToFramePage(){
+       elementMethods.scrollElementByPixel(0,250);
+       elementMethods.clickElement(alertFramesPage);
+   }
 }
 
