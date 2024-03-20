@@ -14,11 +14,9 @@ import java.io.File;
 import java.util.List;
 
 public class PracticeFormPage extends BasePage {
-
     public PracticeFormPage(WebDriver webDriver) {
         super(webDriver);
     }
-
 
     @FindBy(id = "firstName")
     private WebElement firstName;
@@ -62,11 +60,9 @@ public class PracticeFormPage extends BasePage {
     @FindBy(id = "submit")
     private WebElement submit;
 
-
     public void clickSubmit(){
         elementMethods.clickElemForce(submit);
     }
-
     public void fillFirstName(String firstNameValue){
         elementMethods.fillElement(firstName, firstNameValue);
         elementMethods.scrollElementByPixel(0,450);

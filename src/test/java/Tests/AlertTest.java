@@ -19,7 +19,6 @@ public class AlertTest extends SharedData {
 
     @Test
     public void alertButtons() {
-
         HomePage homePage = new HomePage(getWebDriver());
         homePage.navigateToAlertFrameWindowPage();
 
@@ -31,6 +30,5 @@ public class AlertTest extends SharedData {
         alertPage.dealWithDelayAlert();
         alertPage.dealWithPromptButton("Moo moo, Baa baa");
         alertPage.dealWithCancelButton();
-
     }
 }

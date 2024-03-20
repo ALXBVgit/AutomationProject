@@ -36,6 +36,5 @@ public class WebTableTest extends SharedData {
         webTablePage.addNewEntry(firstnameValue, lastNameValue, emailAddr, ageValue, salaryValue, departmentValue);
         webTablePage.editEntry(firstnameModifyValue, editAgeValue);
         webTablePage.deleteEntry();
-
     }
 }

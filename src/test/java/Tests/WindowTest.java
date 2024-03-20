@@ -17,7 +17,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class WindowTest extends SharedData {
-
     @Test
     public void windowMethod(){
         HomePage homePage = new HomePage(getWebDriver());

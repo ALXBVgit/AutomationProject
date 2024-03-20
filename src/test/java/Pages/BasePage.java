@@ -8,8 +8,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 public class BasePage {
-    public ElementMethods elementMethods;
     public WebDriver webDriver;
+    public ElementMethods elementMethods;
     public AlertMethods alertMethods;
     public WindowMethods windowMethods;
     public FrameMethods frameMethods;

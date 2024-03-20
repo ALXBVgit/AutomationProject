@@ -13,10 +13,10 @@ import java.time.Duration;
 
 public class ElementMethods {
     private WebDriver webDriver;
-
     public ElementMethods (WebDriver webDriver) {
         this.webDriver = webDriver;
     }
+
     public void scrollElementByPixel (Integer x, Integer y) {
         JavascriptExecutor js = (JavascriptExecutor) webDriver;
         js.executeScript("window.scrollBy("+x+","+y+")", "");
@@ -42,7 +42,6 @@ public class ElementMethods {
         waitVisibleElement(element);
         element.sendKeys(value);
     }
-
     public void refillElement(WebElement element, String value){
         waitVisibleElement(element);
         element.clear();

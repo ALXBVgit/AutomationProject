@@ -14,7 +14,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 public class FrameTest extends SharedData {
-
     @Test
     public void windowMethod() {
         HomePage homePage = new HomePage(getWebDriver());

@@ -12,7 +12,6 @@ public class WebTablePage extends  BasePage{
 
     @FindBy(id = "addNewRecordButton")
     private WebElement addField;
-
     @FindBy(id = "firstName")
     private WebElement firstnameField;
     @FindBy (id = "lastName")
@@ -32,7 +31,6 @@ public class WebTablePage extends  BasePage{
     @FindBy(id = "delete-record-4")
     private WebElement deleteButton;
 
-
     public void addNewEntry(String firstnameValue, String lastNameValue,
                             String emailAddr, String ageValue, String salaryValue, String departmentValue){
         elementMethods.clickElement(addField);
@@ -47,8 +45,6 @@ public class WebTablePage extends  BasePage{
     public void editEntry(String firstnameValue, String ageValue){
         elementMethods.scrollElementByPixel(0, 250);
         elementMethods.clickElement(editButton);
-
-//        firstnameModifyField.clear(); //stergem numele completat anterior
         elementMethods.refillElement(firstnameField, firstnameValue);
         elementMethods.refillElement(ageField, ageValue);
         elementMethods.clickElement(submitButton);
