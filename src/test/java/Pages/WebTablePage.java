@@ -1,5 +1,6 @@
 package Pages;
 
+import ObjectData.WebTableObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -31,22 +32,21 @@ public class WebTablePage extends  BasePage{
     @FindBy(id = "delete-record-4")
     private WebElement deleteButton;
 
-    public void addNewEntry(String firstnameValue, String lastNameValue,
-                            String emailAddr, String ageValue, String salaryValue, String departmentValue){
+    public void addNewEntry(WebTableObject webTableObject){
         elementMethods.clickElement(addField);
-        elementMethods.fillElement(firstnameField, firstnameValue);
-        elementMethods.fillElement(lastNameField, lastNameValue);
-        elementMethods.fillElement(emailField, emailAddr);
-        elementMethods.fillElement(ageField, ageValue);
-        elementMethods.fillElement(salaryField, salaryValue);
-        elementMethods.fillElement(departmentField, departmentValue);
+        elementMethods.fillElement(firstnameField, webTableObject.getFirstnameValue());
+        elementMethods.fillElement(lastNameField, webTableObject.getLastNameValue());
+        elementMethods.fillElement(emailField, webTableObject.getEmailAddr());
+        elementMethods.fillElement(ageField, webTableObject.getAgeValue());
+        elementMethods.fillElement(salaryField, webTableObject.getSalaryValue());
+        elementMethods.fillElement(departmentField, webTableObject.getDepartmentValue());
         elementMethods.clickElement(submitButton);
     }
-    public void editEntry(String firstnameValue, String ageValue){
+    public void editEntry(WebTableObject webTableObject){
         elementMethods.scrollElementByPixel(0, 250);
         elementMethods.clickElement(editButton);
-        elementMethods.refillElement(firstnameField, firstnameValue);
-        elementMethods.refillElement(ageField, ageValue);
+        elementMethods.refillElement(firstnameField, webTableObject.getFirstnameValue());
+        elementMethods.refillElement(ageField, webTableObject.getAgeValue());
         elementMethods.clickElement(submitButton);
     }
     public void deleteEntry(){
