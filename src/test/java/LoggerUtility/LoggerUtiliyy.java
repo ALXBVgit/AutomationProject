@@ -10,11 +10,11 @@ public class LoggerUtiliyy {
 
     private static Logger logger = LogManager.getLogger();
     public static void startTestCase(String testCase){
-        logger.info("****** Execution Started: " + testCase + "******");
+        logger.info("****** Execution Started: " + testCase + " ******");
     }
 
     public static void finishTestCase(String testCase){
-        logger.info("****** Execution Finished: "+testCase+"******");
+        logger.info("****** Execution Finished: "+testCase+" ******");
     }
 
     public static void infotest(String message){
