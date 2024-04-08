@@ -1,6 +1,7 @@
 package Pages;
 
 import HelperMethods.ElementMethods;
+import LoggerUtility.LoggerUtiliyy;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -22,14 +23,21 @@ public class HomePage extends BasePage{
 
     public void navigateToAlertFrameWindowPage(){
         elementMethods.scrollElementByPixel(0,450);
+        LoggerUtiliyy.infotest("User scroll down the page");
         elementMethods.clickElement(alertFramesField);
+        LoggerUtiliyy.infotest("User clisck on element");
+
     }
     public void navigateToFormsPage(){
         elementMethods.scrollElementByPixel(0,450);
+        LoggerUtiliyy.infotest("User scroll down the page");
         elementMethods.clickElement(formsField);
+        LoggerUtiliyy.infotest("User clisck on element");
     }
     public void  navigateToElementsPage(){
         elementMethods.scrollElementByPixel(0,250);
+        LoggerUtiliyy.infotest("User scroll down the page");
         elementMethods.clickElemForce(elementsField);
+        LoggerUtiliyy.infotest("User clisck on element");
     }
 }
