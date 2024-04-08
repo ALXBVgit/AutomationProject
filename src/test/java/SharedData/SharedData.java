@@ -22,7 +22,7 @@ public class SharedData {
     }
     @AfterMethod
     public void clearDriver(){
-//        webDriver.quit();
+        webDriver.quit();
     }
     public WebDriver getWebDriver() {
         return webDriver;
