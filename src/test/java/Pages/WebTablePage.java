@@ -1,5 +1,6 @@
 package Pages;
 
+import LoggerUtility.LoggerUtiliyy;
 import ObjectData.WebTableObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -34,22 +35,36 @@ public class WebTablePage extends  BasePage{
 
     public void addNewEntry(WebTableObject webTableObject){
         elementMethods.clickElement(addField);
+        LoggerUtiliyy.infotest("User clicks add button");
         elementMethods.fillElement(firstnameField, webTableObject.getFirstnameValue());
+        LoggerUtiliyy.infotest("User fills in first name");
         elementMethods.fillElement(lastNameField, webTableObject.getLastNameValue());
+        LoggerUtiliyy.infotest("User fills in last name");
         elementMethods.fillElement(emailField, webTableObject.getEmailAddr());
+        LoggerUtiliyy.infotest("User fills in email value");
         elementMethods.fillElement(ageField, webTableObject.getAgeValue());
+        LoggerUtiliyy.infotest("User fills in age value");
         elementMethods.fillElement(salaryField, webTableObject.getSalaryValue());
+        LoggerUtiliyy.infotest("User fills in salary field");
         elementMethods.fillElement(departmentField, webTableObject.getDepartmentValue());
+        LoggerUtiliyy.infotest("User fills in department");
         elementMethods.clickElement(submitButton);
+        LoggerUtiliyy.infotest("User clicks submit");
     }
     public void editEntry(WebTableObject webTableObject){
         elementMethods.scrollElementByPixel(0, 250);
+        LoggerUtiliyy.infotest("User scrolls");
         elementMethods.clickElement(editButton);
+        LoggerUtiliyy.infotest("User selects edit button");
         elementMethods.refillElement(firstnameField, webTableObject.getFirstnameValue());
+        LoggerUtiliyy.infotest("User changes the firstname");
         elementMethods.refillElement(ageField, webTableObject.getAgeValue());
+        LoggerUtiliyy.infotest("User changes the age");
         elementMethods.clickElement(submitButton);
+        LoggerUtiliyy.infotest("User clicks submit");
     }
     public void deleteEntry(){
         elementMethods.clickElemForce(deleteButton);
+        LoggerUtiliyy.infotest("User clicks on delete entry button");
     }
 }

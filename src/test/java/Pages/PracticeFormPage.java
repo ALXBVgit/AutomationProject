@@ -1,5 +1,6 @@
 package Pages;
 
+import LoggerUtility.LoggerUtiliyy;
 import ObjectData.PracticeFormObject;
 import SharedData.SharedData;
 import org.openqa.selenium.By;
@@ -158,19 +159,33 @@ public class PracticeFormPage extends BasePage {
     public void fillInEntireForm(PracticeFormObject practiceFormObject) {
 
         fillFirstName(practiceFormObject.getFirstNameValue());
+        LoggerUtiliyy.infotest("User fills in first name");
         fillLastName(practiceFormObject.getLastNameValue());
+        LoggerUtiliyy.infotest("User fills in last name");
         fillEmailField(practiceFormObject.getEmailValue());
+        LoggerUtiliyy.infotest("User fills in email");
         fillMobileNumber(practiceFormObject.getMobileNumValue());
+        LoggerUtiliyy.infotest("User fills in phone number");
         elementMethods.scrollElementByPixel(0,250);
+        LoggerUtiliyy.infotest("User scrolls");
         pickDateofBirth(practiceFormObject.getMonthDateOfBirthValue(),
                 practiceFormObject.getYearOfBirthValue(), practiceFormObject.getDobDayvalue());
+        LoggerUtiliyy.infotest("User selects date of birth from date picker form");
         pickGender(practiceFormObject.getGenderValue());
+        LoggerUtiliyy.infotest("User clicks on the gender radio button");
         pickHobbies(practiceFormObject.getHobbies());
+        LoggerUtiliyy.infotest("User selects the hobbies");
         pickSubjects(practiceFormObject.getSubjectValue());
+        LoggerUtiliyy.infotest("User selects the subject");
         UploadPicture(practiceFormObject.getFilePath());
+        LoggerUtiliyy.infotest("User uploads a picture");
         pickAddress(practiceFormObject.getAddressFieldValue());
+        LoggerUtiliyy.infotest("User selects the address value");
         pickState(practiceFormObject.getStateInputValue());
+        LoggerUtiliyy.infotest("User selects the state value");
         pickCity(practiceFormObject.getCityValue());
+        LoggerUtiliyy.infotest("User selects the city value");
         clickSubmit();
+        LoggerUtiliyy.infotest("User clicks submit");
     }
 }

@@ -1,5 +1,6 @@
 package Pages;
 
+import LoggerUtility.LoggerUtiliyy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,6 +15,7 @@ public class ElementPage extends BasePage{
 
     public void naviagetToWebtablePage(){
         elementMethods.clickElement(webTableField);
+        LoggerUtiliyy.infotest("User clicks the web table element");
 
     }
 }
