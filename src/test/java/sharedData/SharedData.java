@@ -7,7 +7,9 @@ import org.testng.annotations.BeforeMethod;
 
 public class SharedData {
     private WebDriver webDriver;
-    @BeforeMethod
+
+    // comment before si after method ca sa nu deschida browser de 2 ori din cauza ca am si Hooks care mosteneste Shared Data
+//    @BeforeMethod
     public void prepareDriver(){
 
         webDriver = new BrowserFactory().getBrowserInstance();
@@ -17,7 +19,7 @@ public class SharedData {
 //        webDriver.manage().window().maximize();
 //        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
-    @AfterMethod
+//    @AfterMethod
     public void clearDriver(){
         webDriver.quit();
     }

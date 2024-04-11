@@ -12,7 +12,6 @@ public class alexPractice {
 
     @Test
     public void metodaTest(){
-
         webDriver = new ChromeDriver();
         webDriver.get("https://snowsports.ro/");
         webDriver.manage().window().maximize();
