@@ -2,7 +2,7 @@
 <suite name="Regression Suite" >
     <test name="Regression suite" >
         <packages>
-            <package name = "Tests.*" />
+            <package name = "tests.*" />
         </packages>
     </test>
 </suite>
