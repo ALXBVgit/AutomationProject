@@ -1,5 +1,6 @@
 package pages;
 
+import database.Queries.WebTable;
 import loggerUtility.LoggerUtiliyy;
 import objectData.WebTableObject;
 import org.openqa.selenium.WebDriver;
@@ -7,8 +8,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class WebTablePage extends  BasePage{
+
+    private WebTable webTable;
     public WebTablePage(WebDriver webDriver) {
         super(webDriver);
+
+        webTable = new WebTable();
     }
 
     @FindBy(id = "addNewRecordButton")
@@ -49,6 +54,11 @@ public class WebTablePage extends  BasePage{
         LoggerUtiliyy.infotest("User fills in department");
         elementMethods.clickElement(submitButton);
         LoggerUtiliyy.infotest("User clicks submit");
+
+
+        webTable.insertIntowebTable(webTableObject);
+        LoggerUtiliyy.infotest("DB insert into web table");
+
     }
     public void editEntry(WebTableObject webTableObject){
         elementMethods.scrollElementByPixel(0, 250);

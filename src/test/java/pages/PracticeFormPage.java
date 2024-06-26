@@ -1,5 +1,6 @@
 package pages;
 
+import database.Queries.PracticeFormTable;
 import loggerUtility.LoggerUtiliyy;
 import objectData.PracticeFormObject;
 import org.openqa.selenium.Keys;
@@ -12,8 +13,12 @@ import java.io.File;
 import java.util.List;
 
 public class PracticeFormPage extends BasePage {
+
+    private PracticeFormTable practiceFormTable;
     public PracticeFormPage(WebDriver webDriver) {
         super(webDriver);
+
+        practiceFormTable = new PracticeFormTable();
     }
 
     @FindBy(id = "firstName")
@@ -183,5 +188,8 @@ public class PracticeFormPage extends BasePage {
         LoggerUtiliyy.infotest("User selects the city value");
         clickSubmit();
         LoggerUtiliyy.infotest("User clicks submit");
+
+        practiceFormTable.insertIntoPracticeForm(practiceFormObject);
+        LoggerUtiliyy.infotest("Form was populated with the data into Oractice Form Table 26 jun 2024 :-)");
     }
 }

@@ -5,10 +5,11 @@ import pages.ElementPage;
 import pages.HomePage;
 import pages.WebTablePage;
 import propertyUtility.PropertyUtility;
+import sharedData.Hooks;
 import sharedData.SharedData;
 import org.testng.annotations.Test;
 
-public class WebTableTest extends SharedData {
+public class WebTableTest extends Hooks {
 
     @Test
     public void metodaTest(){
